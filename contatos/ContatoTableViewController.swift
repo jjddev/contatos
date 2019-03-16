@@ -7,22 +7,76 @@
 //
 
 import UIKit
+import CoreData
 
 class ContatoTableViewController: UITableViewController {
 
-    var contatos = ["Fulano", "Beltrano", "Teste"]
-    var contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var contatos = [Contato]()
+    //var contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+      
+        
+        
+        let contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        /*
+        let c1 = (Contato(context: contexto)).nome = "Juliano"
+        let c2 = (Contato(context: contexto)).nome = "Alberto"
+        let c3 = (Contato(context: contexto)).nome = "Maria"
+        
+        do {
+            try contexto.save()
+        } catch {
+            print("Erro: \(error)")
+        }
+        */
+        
+        
+        
+        let req: NSFetchRequest<Contato> = Contato.fetchRequest()
+        
+        
+        do{
+            contatos = try contexto.fetch(req)
+        } catch {
+            print("erro: \(error)")
+        }
+        
+        
+        /*
+        let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let p = Pessoa(context: contexto)
+        
+        let p1 = Pessoa(context: contexto)
+        p1.nome = "teste"
+        
+        
+        p.nome = "Decker"
+        
+        do{
+            try contexto.save()
+        } catch {
+            print("Erro: \(error)")
+        }
+        
+        
+        var pessoas: [Pessoa] = []
+        let req: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
+        req.predicate = NSPredicate(format: "nome like 'De*'")
+        
+        
+        
+        do{
+            pessoas = try contexto.fetch(req)
+        } catch {
+            print("erro: \(error)")
+        }
+ 
+ */
     }
 
     // MARK: - Table view data source
@@ -41,7 +95,7 @@ class ContatoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contatoCelula", for: indexPath)
 
-        cell.textLabel?.text = contatos[indexPath.row]
+        cell.textLabel?.text = contatos[indexPath.row].nome
 
         return cell
     }

@@ -1,5 +1,5 @@
 //
-//  Pessoa.swift
+//  Contato.swift
 //  contatos
 //
 //  Created by PUCPR on 15/03/19.
@@ -8,16 +8,7 @@
 
 import Foundation
 
-/*
-class Pessoa {
+class Contato {
     var id: Int
     var nome: String
-    var telefone:[String]
-    
-    init(){
-        id = 0
-        nome = ""
-        telefone = []
-    }
 }
-*/

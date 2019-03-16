@@ -9,25 +9,23 @@
 /* Begin PBXBuildFile section */
 		13A37574223C71450079CA7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37573223C71450079CA7E /* AppDelegate.swift */; };
 		13A37579223C71450079CA7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A37577223C71450079CA7E /* Main.storyboard */; };
-		13A3757C223C71450079CA7E /* contatos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A3757A223C71450079CA7E /* contatos.xcdatamodeld */; };
 		13A3757E223C71460079CA7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A3757D223C71460079CA7E /* Assets.xcassets */; };
 		13A37581223C71460079CA7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A3757F223C71460079CA7E /* LaunchScreen.storyboard */; };
-		13A3758A223C717F0079CA7E /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37589223C717F0079CA7E /* Pessoa.swift */; };
 		13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */; };
-		13A3758F223C74E00079CA7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A3758D223C74E00079CA7E /* Model.xcdatamodeld */; };
+		13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A37592223C7C1E0079CA7E /* Model.xcdatamodeld */; };
+		13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37596223C7DF10079CA7E /* ContatoDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13A37570223C71450079CA7E /* contatos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contatos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A37573223C71450079CA7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A37578223C71450079CA7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		13A3757B223C71450079CA7E /* contatos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = contatos.xcdatamodel; sourceTree = "<group>"; };
 		13A3757D223C71460079CA7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A37580223C71460079CA7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A37582223C71460079CA7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13A37589223C717F0079CA7E /* Pessoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewController.swift; sourceTree = "<group>"; };
-		13A3758E223C74E00079CA7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		13A37593223C7C1E0079CA7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		13A37596223C7DF10079CA7E /* ContatoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +42,7 @@
 		13A37567223C71450079CA7E = {
 			isa = PBXGroup;
 			children = (
+				13A37595223C7DD70079CA7E /* DAO */,
 				13A37588223C71610079CA7E /* Model */,
 				13A37572223C71450079CA7E /* contatos */,
 				13A37571223C71450079CA7E /* Products */,
@@ -67,7 +66,6 @@
 				13A3757D223C71460079CA7E /* Assets.xcassets */,
 				13A3757F223C71460079CA7E /* LaunchScreen.storyboard */,
 				13A37582223C71460079CA7E /* Info.plist */,
-				13A3757A223C71450079CA7E /* contatos.xcdatamodeld */,
 			);
 			path = contatos;
 			sourceTree = "<group>";
@@ -75,10 +73,17 @@
 		13A37588223C71610079CA7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				13A37589223C717F0079CA7E /* Pessoa.swift */,
-				13A3758D223C74E00079CA7E /* Model.xcdatamodeld */,
+				13A37592223C7C1E0079CA7E /* Model.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		13A37595223C7DD70079CA7E /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				13A37596223C7DF10079CA7E /* ContatoDAO.swift */,
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +159,8 @@
 			files = (
 				13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */,
 				13A37574223C71450079CA7E /* AppDelegate.swift in Sources */,
-				13A3758A223C717F0079CA7E /* Pessoa.swift in Sources */,
-				13A3757C223C71450079CA7E /* contatos.xcdatamodeld in Sources */,
-				13A3758F223C74E00079CA7E /* Model.xcdatamodeld in Sources */,
+				13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */,
+				13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,22 +360,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		13A3757A223C71450079CA7E /* contatos.xcdatamodeld */ = {
+		13A37592223C7C1E0079CA7E /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				13A3757B223C71450079CA7E /* contatos.xcdatamodel */,
+				13A37593223C7C1E0079CA7E /* Model.xcdatamodel */,
 			);
-			currentVersion = 13A3757B223C71450079CA7E /* contatos.xcdatamodel */;
-			path = contatos.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		13A3758D223C74E00079CA7E /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				13A3758E223C74E00079CA7E /* Model.xcdatamodel */,
-			);
-			currentVersion = 13A3758E223C74E00079CA7E /* Model.xcdatamodel */;
+			currentVersion = 13A37593223C7C1E0079CA7E /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
