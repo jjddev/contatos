@@ -10,4 +10,32 @@ import Foundation
 
 class ContatoDAO {
     
+    init(){
+        
+    }
+    
+    func find(){
+        
+    }
+    
+    func findAll(){
+        
+    }
+    
+    func save(){
+        
+    }
+    
+    func insert(){
+        
+    }
+    
+    func update(){
+        
+    }
+    
+    func delete(){
+        
+    }
+    
 }
