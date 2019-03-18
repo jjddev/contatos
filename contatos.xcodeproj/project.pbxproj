@@ -14,6 +14,7 @@
 		13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */; };
 		13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A37592223C7C1E0079CA7E /* Model.xcdatamodeld */; };
 		13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37596223C7DF10079CA7E /* ContatoDAO.swift */; };
+		13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C3222404B8E00E1CCA5 /* FormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewController.swift; sourceTree = "<group>"; };
 		13A37593223C7C1E0079CA7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		13A37596223C7DF10079CA7E /* ContatoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
+		13C11C3222404B8E00E1CCA5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,9 @@
 		13A37567223C71450079CA7E = {
 			isa = PBXGroup;
 			children = (
+				13C11C5422405D8B00E1CCA5 /* ViewModel */,
+				13C11C5322405D7E00E1CCA5 /* Controller */,
+				13C11C5222405D7200E1CCA5 /* View */,
 				13A37595223C7DD70079CA7E /* DAO */,
 				13A37588223C71610079CA7E /* Model */,
 				13A37572223C71450079CA7E /* contatos */,
@@ -60,12 +65,6 @@
 		13A37572223C71450079CA7E /* contatos */ = {
 			isa = PBXGroup;
 			children = (
-				13A37573223C71450079CA7E /* AppDelegate.swift */,
-				13A37577223C71450079CA7E /* Main.storyboard */,
-				13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */,
-				13A3757D223C71460079CA7E /* Assets.xcassets */,
-				13A3757F223C71460079CA7E /* LaunchScreen.storyboard */,
-				13A37582223C71460079CA7E /* Info.plist */,
 			);
 			path = contatos;
 			sourceTree = "<group>";
@@ -84,6 +83,34 @@
 				13A37596223C7DF10079CA7E /* ContatoDAO.swift */,
 			);
 			path = DAO;
+			sourceTree = "<group>";
+		};
+		13C11C5222405D7200E1CCA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13A3757D223C71460079CA7E /* Assets.xcassets */,
+				13A37582223C71460079CA7E /* Info.plist */,
+				13A37577223C71450079CA7E /* Main.storyboard */,
+				13A3757F223C71460079CA7E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13C11C5322405D7E00E1CCA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13A37573223C71450079CA7E /* AppDelegate.swift */,
+				13C11C3222404B8E00E1CCA5 /* FormViewController.swift */,
+				13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		13C11C5422405D8B00E1CCA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +187,7 @@
 				13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */,
 				13A37574223C71450079CA7E /* AppDelegate.swift in Sources */,
 				13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */,
+				13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */,
 				13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
