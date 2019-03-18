@@ -15,6 +15,7 @@
 		13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A37592223C7C1E0079CA7E /* Model.xcdatamodeld */; };
 		13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37596223C7DF10079CA7E /* ContatoDAO.swift */; };
 		13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C3222404B8E00E1CCA5 /* FormViewController.swift */; };
+		13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		13A37593223C7C1E0079CA7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		13A37596223C7DF10079CA7E /* ContatoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
 		13C11C3222404B8E00E1CCA5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		13C11C5422405D8B00E1CCA5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */,
+				13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */,
 				13A37574223C71450079CA7E /* AppDelegate.swift in Sources */,
 				13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */,
 				13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */,
