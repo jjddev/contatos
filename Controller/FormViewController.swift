@@ -10,10 +10,12 @@ import UIKit
 
 class FormViewController: UIViewController {
 
+    var contatoViewModel : ContatoViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 

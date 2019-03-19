@@ -17,6 +17,10 @@ class ContatoViewModel {
     
     init(_ contexto: NSPersistentContainer){
         dao = ContatoDAO(contexto)
+        
+        if contato == nil {
+            contato = Contato(context: dao!.contexto!.viewContext)
+        }
     }
     
     func listAll() -> [Contato] {
