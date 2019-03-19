@@ -9,16 +9,23 @@
 import UIKit
 
 class FormViewController: UIViewController {
-
+    @IBOutlet weak var vNome: UITextField!
+    
     var contatoViewModel : ContatoViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
 
+    @IBAction func salvar(_ sender: Any) {
+        let c = contatoViewModel!.novoContato()
+        c.nome = vNome.text!
+        contatoViewModel!.save(c)
+        
+        print("salvou")
+        
+    }
     /*
     // MARK: - Navigation
 

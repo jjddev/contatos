@@ -11,7 +11,7 @@ import CoreData
 
 class ContatoDAO {
     
-    var contexto: NSPersistentContainer?
+    private var contexto: NSPersistentContainer?
     
     init(_ contexto: NSPersistentContainer){
         self.contexto = contexto
@@ -33,7 +33,7 @@ class ContatoDAO {
     }
     
     func save(_ c: Contato){
-        
+       
     }
     
     func insert(_ c: Contato){

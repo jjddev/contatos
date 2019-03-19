@@ -63,7 +63,7 @@
                                         <rect key="frame" x="27.5" y="0.0" width="288" height="104.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YS1-jR-U5W">
-                                                <rect key="frame" x="8" y="45" width="97" height="30"/>
+                                                <rect key="frame" x="8" y="45" width="272" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -120,17 +120,27 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwj-bq-Dnn">
-                                        <rect key="frame" x="51.5" y="466.5" width="240" height="104.5"/>
+                                        <rect key="frame" x="16" y="466.5" width="311" height="104.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7p-ef-3Yx">
-                                                <rect key="frame" x="99" y="42" width="43" height="30"/>
+                                                <rect key="frame" x="8" y="42" width="232" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Salvar"/>
+                                                <connections>
+                                                    <action selector="salvar:" destination="PH5-nd-7OB" eventType="touchUpInside" id="dXI-XJ-Ixu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="hUo-Xc-iH4" firstAttribute="leading" secondItem="hoo-Hm-cbg" secondAttribute="leading" constant="27.5" id="Jvf-st-QXa"/>
+                                    <constraint firstItem="X61-lK-HSQ" firstAttribute="top" secondItem="hUo-Xc-iH4" secondAttribute="bottom" constant="51" id="My3-OZ-4zn"/>
+                                    <constraint firstItem="rwj-bq-Dnn" firstAttribute="top" secondItem="CZ1-Eb-eYi" secondAttribute="bottom" constant="51" id="Ywz-cH-MiS"/>
+                                    <constraint firstAttribute="bottom" secondItem="rwj-bq-Dnn" secondAttribute="bottom" id="otV-BP-3To"/>
+                                    <constraint firstItem="rwj-bq-Dnn" firstAttribute="leading" secondItem="hoo-Hm-cbg" secondAttribute="leading" constant="16" id="ucb-la-jHC"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,10 +152,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nzW-SS-NGr"/>
                     </view>
+                    <connections>
+                        <outlet property="vNome" destination="YS1-jR-U5W" id="Juv-Tc-gLK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7N-pf-oIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340.5797101449277" y="-271.46739130434787"/>
+            <point key="canvasLocation" x="1340" y="-272.11394302848578"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DjE-sz-ihg">

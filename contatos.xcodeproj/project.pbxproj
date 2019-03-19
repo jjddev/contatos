@@ -16,6 +16,7 @@
 		13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37596223C7DF10079CA7E /* ContatoDAO.swift */; };
 		13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C3222404B8E00E1CCA5 /* FormViewController.swift */; };
 		13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */; };
+		3AEE596C22409B950082821E /* GenericDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE596B22409B950082821E /* GenericDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		13A37596223C7DF10079CA7E /* ContatoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
 		13C11C3222404B8E00E1CCA5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
+		3AEE596B22409B950082821E /* GenericDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				13A37596223C7DF10079CA7E /* ContatoDAO.swift */,
+				3AEE596B22409B950082821E /* GenericDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				13A37574223C71450079CA7E /* AppDelegate.swift in Sources */,
 				13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */,
 				13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */,
+				3AEE596C22409B950082821E /* GenericDAO.swift in Sources */,
 				13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,15 +11,17 @@ import CoreData
 
 class ContatoViewModel {
     
-    var dao : ContatoDAO?
-    var contato : Contato?
-    
+    private var dao : ContatoDAO?
+    private var contato : Contato?
+    private var contexto: NSPersistentContainer?
     
     init(_ contexto: NSPersistentContainer){
-        dao = ContatoDAO(contexto)
         
-        if contato == nil {
-            contato = Contato(context: dao!.contexto!.viewContext)
+        self.contexto = contexto
+        self.dao = ContatoDAO(self.contexto!)
+        
+        if self.contato == nil {
+            self.contato = self.novoContato()
         }
     }
     
@@ -27,8 +29,12 @@ class ContatoViewModel {
         return dao!.listAll()
     }
     
-    func save(){
-        dao!.save(<#Contato#>)
+    func save(_ c: Contato){
+        dao!.insert(c)
+    }
+    
+    func novoContato() -> Contato {
+        return Contato(context: self.contexto!.viewContext)
     }
     
 }
