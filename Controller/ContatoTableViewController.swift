@@ -12,17 +12,34 @@ import CoreData
 class ContatoTableViewController: UITableViewController {
 
     var contatos = [Contato]()
+    var contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    var contatoViewModel : ContatoViewModel?
+    
+    
     //var contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    /*
+    init(){
+        super.init(style: UITableView.Style.plain)
+
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    */
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        self.contatoViewModel = ContatoViewModel(self.contexto)
+        self.contatos = contatoViewModel!.listAll()
+        
+        //Contato(context: <#T##NSManagedObjectContext#>)
         
         
-        let contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //let contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         /*
         let c1 = (Contato(context: contexto)).nome = "Juliano"
         let c2 = (Contato(context: contexto)).nome = "Alberto"
@@ -36,7 +53,7 @@ class ContatoTableViewController: UITableViewController {
         */
         
         
-        
+        /*
         let req: NSFetchRequest<Contato> = Contato.fetchRequest()
         
         
@@ -45,7 +62,7 @@ class ContatoTableViewController: UITableViewController {
         } catch {
             print("erro: \(error)")
         }
-        
+        */
         
         /*
         let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

@@ -7,13 +7,24 @@
 //
 
 import Foundation
+import CoreData
 
 class ContatoViewModel {
-    var contatoDAO = ContatoDAO()
+    
+    var dao : ContatoDAO?
     var contato : Contato?
     
-    init(){
-        
+    
+    init(_ contexto: NSPersistentContainer){
+        dao = ContatoDAO(contexto)
+    }
+    
+    func listAll() -> [Contato] {
+        return dao!.listAll()
+    }
+    
+    func save(){
+        dao!.save(<#Contato#>)
     }
     
 }

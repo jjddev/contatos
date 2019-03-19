@@ -67,6 +67,8 @@
 		13A37572223C71450079CA7E /* contatos */ = {
 			isa = PBXGroup;
 			children = (
+				13A3757D223C71460079CA7E /* Assets.xcassets */,
+				13A37582223C71460079CA7E /* Info.plist */,
 			);
 			path = contatos;
 			sourceTree = "<group>";
@@ -90,8 +92,6 @@
 		13C11C5222405D7200E1CCA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				13A3757D223C71460079CA7E /* Assets.xcassets */,
-				13A37582223C71460079CA7E /* Info.plist */,
 				13A37577223C71450079CA7E /* Main.storyboard */,
 				13A3757F223C71460079CA7E /* LaunchScreen.storyboard */,
 			);
