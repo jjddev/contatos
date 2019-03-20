@@ -14,6 +14,8 @@
 		13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */; };
 		13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A37592223C7C1E0079CA7E /* Model.xcdatamodeld */; };
 		13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37596223C7DF10079CA7E /* ContatoDAO.swift */; };
+		13C11ACC2243088500C57FC6 /* camera48.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C11ACB2243088500C57FC6 /* camera48.png */; };
+		13C11ACE2243096C00C57FC6 /* web48.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C11ACD2243096C00C57FC6 /* web48.png */; };
 		13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C3222404B8E00E1CCA5 /* FormViewController.swift */; };
 		13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */; };
 		3AEE596C22409B950082821E /* GenericDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE596B22409B950082821E /* GenericDAO.swift */; };
@@ -29,6 +31,8 @@
 		13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewController.swift; sourceTree = "<group>"; };
 		13A37593223C7C1E0079CA7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		13A37596223C7DF10079CA7E /* ContatoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
+		13C11ACB2243088500C57FC6 /* camera48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera48.png; sourceTree = "<group>"; };
+		13C11ACD2243096C00C57FC6 /* web48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web48.png; sourceTree = "<group>"; };
 		13C11C3222404B8E00E1CCA5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
 		3AEE596B22409B950082821E /* GenericDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDAO.swift; sourceTree = "<group>"; };
@@ -69,7 +73,9 @@
 		13A37572223C71450079CA7E /* contatos */ = {
 			isa = PBXGroup;
 			children = (
+				13C11ACD2243096C00C57FC6 /* web48.png */,
 				13A3757D223C71460079CA7E /* Assets.xcassets */,
+				13C11ACB2243088500C57FC6 /* camera48.png */,
 				13A37582223C71460079CA7E /* Info.plist */,
 			);
 			path = contatos;
@@ -177,6 +183,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C11ACE2243096C00C57FC6 /* web48.png in Resources */,
+				13C11ACC2243088500C57FC6 /* camera48.png in Resources */,
 				13A37581223C71460079CA7E /* LaunchScreen.storyboard in Resources */,
 				13A3757E223C71460079CA7E /* Assets.xcassets in Resources */,
 				13A37579223C71450079CA7E /* Main.storyboard in Resources */,

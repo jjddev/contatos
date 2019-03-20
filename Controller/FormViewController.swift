@@ -25,7 +25,6 @@ class FormViewController: UIViewController {
         c.nome = vNome.text!
         contatoViewModel!.save(c)
         self.navigationController?.popViewController(animated: true)
-        
     }
     /*
     // MARK: - Navigation

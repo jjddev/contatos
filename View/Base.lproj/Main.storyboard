@@ -25,6 +25,24 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f9M-rx-Ehb" id="M0R-a3-Vz3">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-RG-HpG">
+                                            <rect key="frame" x="336" y="5" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="camera48.png"/>
+                                            <connections>
+                                                <action selector="exibirGaleria:" destination="bzY-SX-xKJ" eventType="touchUpInside" id="0dM-jl-Fea"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzc-4I-iPK">
+                                            <rect key="frame" x="296" y="5" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="web48.png"/>
+                                            <connections>
+                                                <action selector="exibirSite:" destination="bzY-SX-xKJ" eventType="touchUpInside" id="7Mz-6Z-H0w"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="PH5-nd-7OB" kind="show" identifier="editar" id="4sh-4Q-ufi"/>
@@ -179,6 +197,10 @@
             <point key="canvasLocation" x="-503.19999999999999" y="-277.51124437781112"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera48.png" width="48" height="48"/>
+        <image name="web48.png" width="48" height="48"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4sh-4Q-ufi"/>
     </inferredMetricsTieBreakers>

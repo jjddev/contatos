@@ -14,20 +14,6 @@ class ContatoTableViewController: UITableViewController {
     var contatos = [Contato]()
     var contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var contatoViewModel : ContatoViewModel?
-    
-    
-    //var contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    /*
-    init(){
-        super.init(style: UITableView.Style.plain)
-
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    */
 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -114,9 +100,7 @@ class ContatoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contatoCelula", for: indexPath)
-
         cell.textLabel?.text = contatos[indexPath.row].nome
-
         return cell
     }
     
@@ -170,9 +154,14 @@ class ContatoTableViewController: UITableViewController {
             let index = tableView.indexPathForSelectedRow!.row
             let contato = contatos[index]
             contatoViewModel?.setContato(contato)
-            
         }
     }
     
-
+    @IBAction func exibirSite(_ sender: Any) {
+        print("site")
+    }
+    
+    @IBAction func exibirGaleria(_ sender: Any) {
+        print("galeria")
+    }
 }
