@@ -104,12 +104,10 @@ class ContatoTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return contatos.count
     }
 
@@ -131,17 +129,22 @@ class ContatoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            
+            let contato = contatos[indexPath.row]
+            
+            contatoViewModel!.delete(contato)
+            
+            tableView.reloadData()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -165,6 +168,13 @@ class ContatoTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let next = segue.destination as! FormViewController
             next.contatoViewModel = contatoViewModel
+        
+        if segue.identifier == "editar"{
+            let index = tableView.indexPathForSelectedRow!.row
+            let contato = contatos[index]
+            contatoViewModel?.setContato(contato)
+            
+        }
     }
     
 

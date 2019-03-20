@@ -44,11 +44,22 @@ class ContatoDAO {
         }
     }
     
-    func update(){
-        
+    func update(_ c: Contato){
+        do {
+            try self.contexto!.viewContext.save()
+        } catch {
+            print("Erro: \(error)")
+        }
     }
     
-    func delete(){
+    func delete(_ c: Contato){
+        self.contexto!.viewContext.delete(c)
+        
+        do {
+            try self.contexto!.viewContext.save()
+        } catch {
+            print("Erro: \(error)")
+        }
         
     }
     

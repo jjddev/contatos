@@ -20,9 +20,6 @@ class ContatoViewModel {
         self.contexto = contexto
         self.dao = ContatoDAO(self.contexto!)
         
-        if self.contato == nil {
-            self.contato = self.novoContato()
-        }
     }
     
     func listAll() -> [Contato] {
@@ -35,6 +32,18 @@ class ContatoViewModel {
     
     func novoContato() -> Contato {
         return Contato(context: self.contexto!.viewContext)
+    }
+    
+    func delete(_ c: Contato){
+        dao!.delete(c)
+    }
+    
+    func setContato(_ contato: Contato){
+        self.contato = contato
+    }
+    
+    func getContato() -> Contato{
+        return self.contato!
     }
     
 }
