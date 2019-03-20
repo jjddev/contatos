@@ -19,6 +19,7 @@ class ContatoViewModel {
         
         self.contexto = contexto
         self.dao = ContatoDAO(self.contexto!)
+        //self.contato = Contato(context: self.contexto!.viewContext)
         
     }
     
@@ -27,7 +28,7 @@ class ContatoViewModel {
     }
     
     func save(_ c: Contato){
-        dao!.insert(c)
+        dao!.save(c)
     }
     
     func novoContato() -> Contato {
@@ -42,8 +43,8 @@ class ContatoViewModel {
         self.contato = contato
     }
     
-    func getContato() -> Contato{
-        return self.contato!
+    func getContato() -> Contato {
+        return self.contato == nil ? novoContato() : self.contato!
     }
     
 }

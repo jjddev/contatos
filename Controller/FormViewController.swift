@@ -15,22 +15,17 @@ class FormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        vNome.text = contatoViewModel!.getContato().nome
-        
+        let contato = contatoViewModel?.getContato()
+        vNome.text = contato?.nome
     }
     
 
     @IBAction func salvar(_ sender: Any) {
+        let c = contatoViewModel!.getContato()
+        c.nome = vNome.text!
+        contatoViewModel!.save(c)
+        self.navigationController?.popViewController(animated: true)
         
-        
-        let c = contatoViewModel!.novoContato()
-        c.nome = vNome.text
-        
-        
-            c.nome = vNome.text!
-            contatoViewModel!.save(c)
-            print("salvou")
     }
     /*
     // MARK: - Navigation

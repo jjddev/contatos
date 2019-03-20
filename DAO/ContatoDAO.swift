@@ -33,18 +33,6 @@ class ContatoDAO {
     }
     
     func save(_ c: Contato){
-       
-    }
-    
-    func insert(_ c: Contato){
-        do {
-            try self.contexto!.viewContext.save()
-        } catch {
-            print("Erro: \(error)")
-        }
-    }
-    
-    func update(_ c: Contato){
         do {
             try self.contexto!.viewContext.save()
         } catch {

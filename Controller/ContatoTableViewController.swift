@@ -133,12 +133,9 @@ class ContatoTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
-            
             let contato = contatos[indexPath.row]
-            
             contatoViewModel!.delete(contato)
-            
+            contatos = contatoViewModel!.listAll()
             tableView.reloadData()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -166,8 +163,8 @@ class ContatoTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let next = segue.destination as! FormViewController
-            next.contatoViewModel = contatoViewModel
+        let next = segue.destination as! FormViewController
+        next.contatoViewModel = contatoViewModel
         
         if segue.identifier == "editar"{
             let index = tableView.indexPathForSelectedRow!.row
