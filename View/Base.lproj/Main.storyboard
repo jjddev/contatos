@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contato Table View Controller-->
+        <!--Contatos-->
         <scene sceneID="Mxg-Vf-bSy">
             <objects>
                 <tableViewController id="bzY-SX-xKJ" customClass="ContatoTableViewController" customModule="contatos" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="bzY-SX-xKJ" id="c5x-Sr-GXj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="2ZJ-xg-yOX">
+                    <navigationItem key="navigationItem" title="Contatos" id="2ZJ-xg-yOX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="374-jx-tiy">
                             <connections>
                                 <segue destination="PH5-nd-7OB" kind="show" id="IBJ-6S-vp2"/>
