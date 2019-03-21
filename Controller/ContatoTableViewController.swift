@@ -147,6 +147,15 @@ class ContatoTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //let next = segue.destination as! WebViewController
+        
+        
+        if segue.identifier == "site" {
+            return
+        }
+        
+        
         let next = segue.destination as! FormViewController
         next.contatoViewModel = contatoViewModel
         
@@ -158,6 +167,7 @@ class ContatoTableViewController: UITableViewController {
     }
     
     @IBAction func exibirSite(_ sender: Any) {
+        
         print("site")
     }
     

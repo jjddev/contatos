@@ -16,6 +16,7 @@
 		13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A37596223C7DF10079CA7E /* ContatoDAO.swift */; };
 		13C11ACC2243088500C57FC6 /* camera48.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C11ACB2243088500C57FC6 /* camera48.png */; };
 		13C11ACE2243096C00C57FC6 /* web48.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C11ACD2243096C00C57FC6 /* web48.png */; };
+		13C11AD022430F5B00C57FC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11ACF22430F5B00C57FC6 /* WebViewController.swift */; };
 		13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C3222404B8E00E1CCA5 /* FormViewController.swift */; };
 		13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */; };
 		3AEE596C22409B950082821E /* GenericDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE596B22409B950082821E /* GenericDAO.swift */; };
@@ -33,6 +34,7 @@
 		13A37596223C7DF10079CA7E /* ContatoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
 		13C11ACB2243088500C57FC6 /* camera48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera48.png; sourceTree = "<group>"; };
 		13C11ACD2243096C00C57FC6 /* web48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web48.png; sourceTree = "<group>"; };
+		13C11ACF22430F5B00C57FC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		13C11C3222404B8E00E1CCA5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
 		3AEE596B22409B950082821E /* GenericDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDAO.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				13A37573223C71450079CA7E /* AppDelegate.swift */,
 				13C11C3222404B8E00E1CCA5 /* FormViewController.swift */,
 				13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */,
+				13C11ACF22430F5B00C57FC6 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */,
 				3AEE596C22409B950082821E /* GenericDAO.swift in Sources */,
 				13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */,
+				13C11AD022430F5B00C57FC6 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

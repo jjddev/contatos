@@ -10,6 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="azI-yW-tge">
+            <objects>
+                <viewController id="fi9-yx-dVI" customClass="WebViewController" customModule="contatos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n7N-cz-zz0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qqd-ld-lo9">
+                                <rect key="frame" x="15" y="79" width="345" height="573"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2eO-Ed-GHh">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="573"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qqd-ld-lo9" firstAttribute="top" secondItem="lo7-RK-6Ra" secondAttribute="top" constant="15" id="4QQ-z5-j6v"/>
+                            <constraint firstItem="qqd-ld-lo9" firstAttribute="leading" secondItem="lo7-RK-6Ra" secondAttribute="leading" constant="15" id="YL1-HN-g7O"/>
+                            <constraint firstItem="lo7-RK-6Ra" firstAttribute="bottom" secondItem="qqd-ld-lo9" secondAttribute="bottom" constant="15" id="c8u-FO-aSQ"/>
+                            <constraint firstItem="lo7-RK-6Ra" firstAttribute="trailing" secondItem="qqd-ld-lo9" secondAttribute="trailing" constant="15" id="mfy-pe-U9T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lo7-RK-6Ra"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="2eO-Ed-GHh" id="GTd-BR-S14"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I4M-tF-H9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="-1030.4347826086957"/>
+        </scene>
         <!--Contatos-->
         <scene sceneID="Mxg-Vf-bSy">
             <objects>
@@ -40,6 +79,7 @@
                                             <state key="normal" title="Button" image="web48.png"/>
                                             <connections>
                                                 <action selector="exibirSite:" destination="bzY-SX-xKJ" eventType="touchUpInside" id="7Mz-6Z-H0w"/>
+                                                <segue destination="fi9-yx-dVI" kind="show" identifier="site" id="eYL-FN-aZl"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -176,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7N-pf-oIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-272.11394302848578"/>
+            <point key="canvasLocation" x="1366" y="-313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DjE-sz-ihg">
