@@ -152,6 +152,15 @@ class ContatoTableViewController: UITableViewController {
         
         
         if segue.identifier == "site" {
+            
+            let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
+            let index = self.tableView.indexPathForRow(at:buttonPosition)
+  
+            let contato = contatos[index!.row]
+            
+            let next = segue.destination as! WebViewController
+            next.site = contato.site
+
             return
         }
         
@@ -166,10 +175,23 @@ class ContatoTableViewController: UITableViewController {
         }
     }
     
+    /*
     @IBAction func exibirSite(_ sender: Any) {
-        
         print("site")
+        
+        let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at:buttonPosition)
+        let cell = self.tableView.cellForRow(at: indexPath!) as! UITableViewCell
+        //print(indexPath!.row)
     }
+    
+    @objc func buttonClicked(_ sender:UIButton){
+        
+        let buttonPosition = sender.convert(CGPoint.zero, to: self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at:buttonPosition)
+        let cell = self.tableView.cellForRow(at: indexPath!) as! UITableViewCell
+        print(cell)//print or get item
+    }*/
     
     @IBAction func exibirGaleria(_ sender: Any) {
         print("galeria")

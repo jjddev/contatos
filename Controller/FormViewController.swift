@@ -10,6 +10,7 @@ import UIKit
 
 class FormViewController: UIViewController {
     @IBOutlet weak var vNome: UITextField!
+    @IBOutlet weak var vSite: UITextField!
     
     var contatoViewModel : ContatoViewModel?
     
@@ -17,12 +18,14 @@ class FormViewController: UIViewController {
         super.viewDidLoad()
         let contato = contatoViewModel?.getContato()
         vNome.text = contato?.nome
+        vSite.text = contato?.site
     }
     
 
     @IBAction func salvar(_ sender: Any) {
         let c = contatoViewModel!.getContato()
         c.nome = vNome.text!
+        c.site = vSite.text!
         contatoViewModel!.save(c)
         self.navigationController?.popViewController(animated: true)
     }
