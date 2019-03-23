@@ -13,20 +13,20 @@ class FormViewController: UIViewController {
     @IBOutlet weak var vSite: UITextField!
     
     var contatoViewModel : ContatoViewModel?
+    var contato: Contato!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let contato = contatoViewModel?.getContato()
+        contato = contatoViewModel?.getContato()
         vNome.text = contato?.nome
         vSite.text = contato?.site
     }
     
 
     @IBAction func salvar(_ sender: Any) {
-        let c = contatoViewModel!.getContato()
-        c.nome = vNome.text!
-        c.site = vSite.text!
-        contatoViewModel!.save(c)
+        contato!.nome = vNome.text!
+        contato!.site = vSite.text!
+        contatoViewModel!.save(contato!)
         self.navigationController?.popViewController(animated: true)
     }
     /*
