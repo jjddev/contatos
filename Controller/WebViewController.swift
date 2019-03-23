@@ -17,20 +17,24 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = URL(string: site!)!
-        webView.load(URLRequest(url: url))
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let alert = UIAlertController(title: nil, message: "Carregando...", preferredStyle: .alert)
+        if site != nil {
+            let url = URL(string: site!)!
+            webView.load(URLRequest(url: url))
+            
+            let alert = UIAlertController(title: nil, message: "Carregando...", preferredStyle: .alert)
         
-        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.gray
-        loadingIndicator.startAnimating();
-        alert.view.addSubview(loadingIndicator)
-        present(alert, animated: true, completion: nil)
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.style = UIActivityIndicatorView.Style.gray
+            loadingIndicator.startAnimating();
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
+        } else {
+            title = "Sem site"
+        }
     }
 
 
