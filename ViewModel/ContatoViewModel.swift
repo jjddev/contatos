@@ -13,7 +13,7 @@ class ContatoViewModel {
     
     private var dao : ContatoDAO?
     private var contato : Contato?
-    private var contexto: NSPersistentContainer?
+     let contexto: NSPersistentContainer?
     
     init(_ contexto: NSPersistentContainer){
         
@@ -32,7 +32,8 @@ class ContatoViewModel {
     }
     
     func novoContato() -> Contato {
-        return Contato(context: self.contexto!.viewContext)
+        self.contato = Contato(context: self.contexto!.viewContext)
+        return contato!
     }
     
     func delete(_ c: Contato){

@@ -14,13 +14,18 @@ class FormViewController: UIViewController {
     
     var contatoViewModel : ContatoViewModel?
     var contato: Contato!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        contato = contatoViewModel?.getContato()
-        vNome.text = contato?.nome
-        vSite.text = contato?.site
+        contato = contatoViewModel!.getContato()
+
+        vNome.text = contato.nome
+        vSite.text = contato.site
+        
+        
     }
+    
+    
     
 
     @IBAction func salvar(_ sender: Any) {

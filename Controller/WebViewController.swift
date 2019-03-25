@@ -44,13 +44,30 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         view = webView
     }
     
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = "Site"
         dismiss(animated: true, completion: nil)
     }
-    
 
+
+    func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
     
+    if error.code == -1001 { // TIMED OUT:
+    
+    // CODE to handle TIMEOUT
+    
+    } else if error.code == -1003 { // SERVER CANNOT BE FOUND
+    
+    // CODE to handle SERVER not found
+    
+    } else if error.code == -1100 { // URL NOT FOUND ON SERVER
+    
+    // CODE to handle URL not found
+    
+    }
+        print("erro")
+    }
     /*
     // MARK: - Navigation
 

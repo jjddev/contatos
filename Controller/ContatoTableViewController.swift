@@ -12,19 +12,21 @@ import CoreData
 class ContatoTableViewController: UITableViewController {
 
     var contatos = [Contato]()
-    var contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    let contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var contatoViewModel : ContatoViewModel?
 
     
     override func viewWillAppear(_ animated: Bool) {
+        print("A contaos: ", contatos.count)
+        contatoViewModel?.contexto?.viewContext.rollback()
         contatos = (contatoViewModel?.listAll())!
+        print("D contaos: ", contatos.count)
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.contatoViewModel = ContatoViewModel(self.contexto)
+        self.contatoViewModel = ContatoViewModel(contexto)
         self.contatos = contatoViewModel!.listAll()
         
         //Contato(context: <#T##NSManagedObjectContext#>)
@@ -164,14 +166,24 @@ class ContatoTableViewController: UITableViewController {
             return
         }
         
+        if segue.identifier == "exemplo" {
+
+            return 
+        }
         
-        let next = segue.destination as! FormViewController
-        next.contatoViewModel = contatoViewModel
+        if segue.identifier == "incluir" {
+            let next = segue.destination as! FormViewController
+            contatoViewModel!.novoContato()
+            next.contatoViewModel = contatoViewModel
+            
+        }
         
-        if segue.identifier == "editar"{
+        if segue.identifier == "editar" {
+            let next = segue.destination as! FormViewController
             let index = tableView.indexPathForSelectedRow!.row
             let contato = contatos[index]
             contatoViewModel?.setContato(contato)
+            next.contatoViewModel = contatoViewModel
         }
     }
     
@@ -193,7 +205,5 @@ class ContatoTableViewController: UITableViewController {
         print(cell)//print or get item
     }*/
     
-    @IBAction func exibirGaleria(_ sender: Any) {
-        print("galeria")
-    }
+
 }

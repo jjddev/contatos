@@ -19,6 +19,13 @@
 		13C11AD022430F5B00C57FC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11ACF22430F5B00C57FC6 /* WebViewController.swift */; };
 		13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C3222404B8E00E1CCA5 /* FormViewController.swift */; };
 		13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */; };
+		3A510FDA2247160D00B7D6C8 /* TelefonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A510FD92247160D00B7D6C8 /* TelefonesTableViewController.swift */; };
+		3AA6B9532246A69C000696A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B9522246A69C000696A8 /* TableViewController.swift */; };
+		3AA6B9582246B681000696A8 /* TelefoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B9562246B681000696A8 /* TelefoneCell.swift */; };
+		3AA6B9592246B681000696A8 /* TelefoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B9572246B681000696A8 /* TelefoneCell.xib */; };
+		3AA6B95B2246F689000696A8 /* icons8-mais-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B95A2246F689000696A8 /* icons8-mais-48.png */; };
+		3AA6B95D2246F691000696A8 /* icons8-cancelar-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B95C2246F691000696A8 /* icons8-cancelar-48.png */; };
+		3AE241ED2247C3DE00F17136 /* xViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE241EC2247C3DE00F17136 /* xViewController.swift */; };
 		3AEE596C22409B950082821E /* GenericDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE596B22409B950082821E /* GenericDAO.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,13 @@
 		13C11ACF22430F5B00C57FC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		13C11C3222404B8E00E1CCA5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
+		3A510FD92247160D00B7D6C8 /* TelefonesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonesTableViewController.swift; sourceTree = "<group>"; };
+		3AA6B9522246A69C000696A8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3AA6B9562246B681000696A8 /* TelefoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefoneCell.swift; sourceTree = "<group>"; };
+		3AA6B9572246B681000696A8 /* TelefoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelefoneCell.xib; sourceTree = "<group>"; };
+		3AA6B95A2246F689000696A8 /* icons8-mais-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-mais-48.png"; sourceTree = "<group>"; };
+		3AA6B95C2246F691000696A8 /* icons8-cancelar-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancelar-48.png"; sourceTree = "<group>"; };
+		3AE241EC2247C3DE00F17136 /* xViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xViewController.swift; sourceTree = "<group>"; };
 		3AEE596B22409B950082821E /* GenericDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +93,8 @@
 				13A3757D223C71460079CA7E /* Assets.xcassets */,
 				13C11ACB2243088500C57FC6 /* camera48.png */,
 				13A37582223C71460079CA7E /* Info.plist */,
+				3AA6B95A2246F689000696A8 /* icons8-mais-48.png */,
+				3AA6B95C2246F691000696A8 /* icons8-cancelar-48.png */,
 			);
 			path = contatos;
 			sourceTree = "<group>";
@@ -104,7 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				13A37577223C71450079CA7E /* Main.storyboard */,
+				3AE241EC2247C3DE00F17136 /* xViewController.swift */,
 				13A3757F223C71460079CA7E /* LaunchScreen.storyboard */,
+				3AA6B9562246B681000696A8 /* TelefoneCell.swift */,
+				3AA6B9572246B681000696A8 /* TelefoneCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +135,8 @@
 				13C11C3222404B8E00E1CCA5 /* FormViewController.swift */,
 				13A3758B223C733D0079CA7E /* ContatoTableViewController.swift */,
 				13C11ACF22430F5B00C57FC6 /* WebViewController.swift */,
+				3AA6B9522246A69C000696A8 /* TableViewController.swift */,
+				3A510FD92247160D00B7D6C8 /* TelefonesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,10 +208,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13C11ACE2243096C00C57FC6 /* web48.png in Resources */,
+				3AA6B95B2246F689000696A8 /* icons8-mais-48.png in Resources */,
 				13C11ACC2243088500C57FC6 /* camera48.png in Resources */,
 				13A37581223C71460079CA7E /* LaunchScreen.storyboard in Resources */,
+				3AA6B95D2246F691000696A8 /* icons8-cancelar-48.png in Resources */,
 				13A3757E223C71460079CA7E /* Assets.xcassets in Resources */,
 				13A37579223C71450079CA7E /* Main.storyboard in Resources */,
+				3AA6B9592246B681000696A8 /* TelefoneCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,10 +228,14 @@
 				13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */,
 				13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */,
 				13A37574223C71450079CA7E /* AppDelegate.swift in Sources */,
+				3AE241ED2247C3DE00F17136 /* xViewController.swift in Sources */,
 				13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */,
 				13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */,
+				3AA6B9582246B681000696A8 /* TelefoneCell.swift in Sources */,
 				3AEE596C22409B950082821E /* GenericDAO.swift in Sources */,
 				13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */,
+				3AA6B9532246A69C000696A8 /* TableViewController.swift in Sources */,
+				3A510FDA2247160D00B7D6C8 /* TelefonesTableViewController.swift in Sources */,
 				13C11AD022430F5B00C57FC6 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
