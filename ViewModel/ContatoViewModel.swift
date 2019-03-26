@@ -36,6 +36,10 @@ class ContatoViewModel {
         return contato!
     }
     
+    func novoTelefone() -> Telefone {
+        return Telefone(context: self.contexto!.viewContext)
+    }
+    
     func delete(_ c: Contato){
         dao!.delete(c)
     }

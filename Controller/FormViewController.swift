@@ -16,15 +16,27 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var contatoViewModel : ContatoViewModel?
     var contato: Contato!
-    var telefones = ["1", "2", "4", "6"]
+    var telefones = ["123", "456", "789"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //print(contato.telefones)
         registerTableViewCells()
         
         
         contato = contatoViewModel!.getContato()
+        
+        //telefones.append(contatoViewModel!.novoTelefone())
+        
+        /*
+        if contato.telefones!.count == 0 {
+            telefones.append(contatoViewModel!.novoTelefone())
+        }else{
+            telefones = contato.telefones?.allObjects as! [Telefone]
+        }
+ */
+        
+        print(contato.telefones)
 
         vNome.text = contato.nome
         vSite.text = contato.site
@@ -32,8 +44,6 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         vTableTelefones.dataSource = self
         vTableTelefones.delegate = self
-        //vTableTelefones.register(TelefoneCell.self, forCellReuseIdentifier: "cell")
-        
     }
 
     func registerTableViewCells(){
@@ -44,6 +54,7 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return (contato.telefones?.count)!
         return telefones.count
     }
     
@@ -52,7 +63,16 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TelefoneCell
         
-        cell.textField.text = telefones[indexPath.row]
+        //cell.textField.text = telefones[indexPath.row]
+        
+        
+        print(contato.telefones!.count)
+        
+        for item in contato!.telefones!.allObjects as! [Telefone] {
+            cell.textField.text = item.numero
+            //print(item.numero)
+        }
+        
         cell.textField.placeholder = "41 99999-9999"
         cell.textField.tag = indexPath.row
         
@@ -66,6 +86,7 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @objc func addRow(_ sender: AnyObject){
+        //telefones.append(contatoViewModel!.novoTelefone())
         telefones.append("")
         vTableTelefones.reloadData()
     }
@@ -82,6 +103,11 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func salvar(_ sender: Any) {
         contato!.nome = vNome.text!
         contato!.site = vSite.text!
+        
+        let t = contatoViewModel?.novoTelefone()
+        t!.numero = "especial"
+        
+        contato.addToTelefones(t!)
         contatoViewModel!.save(contato!)
         self.navigationController?.popViewController(animated: true)
     }
