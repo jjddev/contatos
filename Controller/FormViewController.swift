@@ -27,6 +27,7 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
         contato = contatoViewModel!.getContato()
+        telefones = contato.telefones?.allObjects as! [Telefone]
         
         if telefones.count == 0 {
             telefones.append(contatoViewModel!.novoTelefone())
