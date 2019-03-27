@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Contato" representedClassName="Contato" syncable="YES" codeGenerationType="class">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="site" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="telefones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Telefone" syncable="YES"/>
+        <relationship name="telefones" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Telefone" syncable="YES"/>
     </entity>
     <entity name="Telefone" representedClassName="Telefone" syncable="YES" codeGenerationType="class">
         <attribute name="numero" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contatos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contato" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contato" positionX="562.27734375" positionY="-5.9296875" width="128" height="88"/>
-        <element name="Telefone" positionX="-27" positionY="36" width="128" height="60"/>
+        <element name="Contato" positionX="-432.72265625" positionY="220.0703125" width="128" height="88"/>
+        <element name="Telefone" positionX="-170" positionY="123.9921875" width="128" height="73"/>
     </elements>
 </model>

@@ -9,84 +9,27 @@
 import UIKit
 import CoreData
 
-class ContatoTableViewController: UITableViewController {
+class ContatoTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
 
+    @IBOutlet weak var vBusca: UISearchBar!
+    
     var contatos = [Contato]()
     let contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var contatoViewModel : ContatoViewModel?
 
     
     override func viewWillAppear(_ animated: Bool) {
-        print("A contaos: ", contatos.count)
         contatoViewModel?.contexto?.viewContext.rollback()
-        contatos = (contatoViewModel?.listAll())!
-        print("D contaos: ", contatos.count)
+        self.contatos = (contatoViewModel?.listAll())!
+        vBusca.text = ""
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vBusca.delegate = self
         self.contatoViewModel = ContatoViewModel(contexto)
         self.contatos = contatoViewModel!.listAll()
-        
-        //Contato(context: <#T##NSManagedObjectContext#>)
-        
-        
-        //let contexto  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        /*
-        let c1 = (Contato(context: contexto)).nome = "Juliano"
-        let c2 = (Contato(context: contexto)).nome = "Alberto"
-        let c3 = (Contato(context: contexto)).nome = "Maria"
-        
-        do {
-            try contexto.save()
-        } catch {
-            print("Erro: \(error)")
-        }
-        */
-        
-        
-        /*
-        let req: NSFetchRequest<Contato> = Contato.fetchRequest()
-        
-        
-        do{
-            contatos = try contexto.fetch(req)
-        } catch {
-            print("erro: \(error)")
-        }
-        */
-        
-        /*
-        let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let p = Pessoa(context: contexto)
-        
-        let p1 = Pessoa(context: contexto)
-        p1.nome = "teste"
-        
-        
-        p.nome = "Decker"
-        
-        do{
-            try contexto.save()
-        } catch {
-            print("Erro: \(error)")
-        }
-        
-        
-        var pessoas: [Pessoa] = []
-        let req: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
-        req.predicate = NSPredicate(format: "nome like 'De*'")
-        
-        
-        
-        do{
-            pessoas = try contexto.fetch(req)
-        } catch {
-            print("erro: \(error)")
-        }
- 
- */
     }
 
     // MARK: - Table view data source
@@ -166,11 +109,6 @@ class ContatoTableViewController: UITableViewController {
             return
         }
         
-        if segue.identifier == "exemplo" {
-
-            return 
-        }
-        
         if segue.identifier == "incluir" {
             let next = segue.destination as! FormViewController
             contatoViewModel!.novoContato()
@@ -182,7 +120,7 @@ class ContatoTableViewController: UITableViewController {
             let next = segue.destination as! FormViewController
             let index = tableView.indexPathForSelectedRow!.row
             let contato = contatos[index]
-            contatoViewModel?.setContato(contato)
+            contatoViewModel!.setContato(contato)
             next.contatoViewModel = contatoViewModel
         }
     }
@@ -204,6 +142,15 @@ class ContatoTableViewController: UITableViewController {
         let cell = self.tableView.cellForRow(at: indexPath!) as! UITableViewCell
         print(cell)//print or get item
     }*/
+ 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if vBusca.text != "" {
+            contatos = (contatoViewModel?.findNome(searchText))!
+        } else {
+            contatos = contatoViewModel!.listAll()
+        }
+        
+        tableView.reloadData()
+    }
     
-
 }

@@ -31,14 +31,8 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if telefones.count == 0 {
             telefones.append(contatoViewModel!.novoTelefone())
-        }else{
-            for item in contato!.telefones!.allObjects as! [Telefone] {
-                telefones.append(item)
-            }
         }
         
-        print("did: \(telefones[0].numero)")
-
         vNome.text = contato.nome
         vSite.text = contato.site
     }
@@ -59,16 +53,8 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TelefoneCell
         
-        //cell.textField.text = telefones[indexPath.row]
-        
-        
-        //print(contato.telefones!.count)
-        
-        print("criando celula \(telefones[indexPath.row].numero)")
-       
         cell.textField.text = telefones[indexPath.row].numero
 
-        
         cell.textField.placeholder = "41 99999-9999"
         cell.textField.tag = indexPath.row
         
@@ -82,8 +68,8 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @objc func addRow(_ sender: AnyObject){
-        telefones.append(contatoViewModel!.novoTelefone())
-        //telefones.append("")
+        let t = contatoViewModel!.novoTelefone()
+        telefones.append(t)
         vTableTelefones.reloadData()
     }
     
@@ -100,24 +86,18 @@ class FormViewController: UIViewController, UITableViewDataSource, UITableViewDe
         contato!.nome = vNome.text!
         contato!.site = vSite.text!
         
-        print(contato.telefones!.count)
-        
-        //let t = contatoViewModel?.novoTelefone()
-        //t!.numero = "especial"
-        
-        
-        let cells = vTableTelefones.visibleCells as! [TelefoneCell]
-        var i = 0
-        for t in cells {
-            telefones[i].numero = "aqui"
-            contato.addToTelefones(telefones[i])
-            print("telefone: \(telefones[i].numero)")
-            
-            i += 1
+        if contato.telefones!.count > 0 {
+            contatoViewModel!.deleteTelefones(contato)
         }
         
+        let linhas = vTableTelefones.visibleCells as! [TelefoneCell]
+        for vTelefone in linhas {
+            let t = contatoViewModel!.novoTelefone()
+            t.numero = vTelefone.textField.text
+            contato.addToTelefones(t)
+        }
+    
         contatoViewModel!.save(contato!)
-        print(contato.telefones!.count)
         self.navigationController?.popViewController(animated: true)
     }
     /*

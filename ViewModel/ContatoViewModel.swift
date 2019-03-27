@@ -11,9 +11,9 @@ import CoreData
 
 class ContatoViewModel {
     
-    private var dao : ContatoDAO?
+    var dao : ContatoDAO?
     private var contato : Contato?
-     let contexto: NSPersistentContainer?
+    var contexto: NSPersistentContainer?
     
     init(_ contexto: NSPersistentContainer){
         
@@ -25,6 +25,10 @@ class ContatoViewModel {
     
     func listAll() -> [Contato] {
         return dao!.listAll()
+    }
+    
+    func findNome(_ nome: String) -> [Contato]{
+        return (dao?.findNome(nome))!
     }
     
     func save(_ c: Contato){
@@ -50,6 +54,16 @@ class ContatoViewModel {
     
     func getContato() -> Contato {
         return self.contato == nil ? novoContato() : self.contato!
+    }
+    
+    func deleteTelefones(_ c: Contato){
+        dao!.deleteTelefones(c)
+        do {
+            try self.contexto!.viewContext.save()
+        } catch {
+            print("Erro: \(error)")
+        }
+        //dao!.delete(c)
     }
     
 }
