@@ -19,6 +19,8 @@
 		13C11AD022430F5B00C57FC6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11ACF22430F5B00C57FC6 /* WebViewController.swift */; };
 		13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C3222404B8E00E1CCA5 /* FormViewController.swift */; };
 		13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */; };
+		13E4F71E224C3EC9006B959F /* FotoUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4F71D224C3EC9006B959F /* FotoUICollectionViewCell.swift */; };
+		13E4F720224C4527006B959F /* FotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4F71F224C4527006B959F /* FotosCollectionViewController.swift */; };
 		3A510FDA2247160D00B7D6C8 /* TelefonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A510FD92247160D00B7D6C8 /* TelefonesTableViewController.swift */; };
 		3AA6B9532246A69C000696A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B9522246A69C000696A8 /* TableViewController.swift */; };
 		3AA6B9582246B681000696A8 /* TelefoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA6B9562246B681000696A8 /* TelefoneCell.swift */; };
@@ -44,6 +46,8 @@
 		13C11ACF22430F5B00C57FC6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		13C11C3222404B8E00E1CCA5 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		13C11C5522405E6E00E1CCA5 /* ContatoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewModel.swift; sourceTree = "<group>"; };
+		13E4F71D224C3EC9006B959F /* FotoUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoUICollectionViewCell.swift; sourceTree = "<group>"; };
+		13E4F71F224C4527006B959F /* FotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotosCollectionViewController.swift; sourceTree = "<group>"; };
 		3A510FD92247160D00B7D6C8 /* TelefonesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonesTableViewController.swift; sourceTree = "<group>"; };
 		3AA6B9522246A69C000696A8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3AA6B9562246B681000696A8 /* TelefoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefoneCell.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		13C11C5222405D7200E1CCA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13E4F71D224C3EC9006B959F /* FotoUICollectionViewCell.swift */,
 				13A37577223C71450079CA7E /* Main.storyboard */,
 				3AE241EC2247C3DE00F17136 /* xViewController.swift */,
 				13A3757F223C71460079CA7E /* LaunchScreen.storyboard */,
@@ -137,6 +142,7 @@
 				13C11ACF22430F5B00C57FC6 /* WebViewController.swift */,
 				3AA6B9522246A69C000696A8 /* TableViewController.swift */,
 				3A510FD92247160D00B7D6C8 /* TelefonesTableViewController.swift */,
+				13E4F71F224C4527006B959F /* FotosCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E4F720224C4527006B959F /* FotosCollectionViewController.swift in Sources */,
 				13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */,
 				13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */,
 				13A37574223C71450079CA7E /* AppDelegate.swift in Sources */,
@@ -236,6 +243,7 @@
 				13A37597223C7DF10079CA7E /* ContatoDAO.swift in Sources */,
 				3AA6B9532246A69C000696A8 /* TableViewController.swift in Sources */,
 				3A510FDA2247160D00B7D6C8 /* TelefonesTableViewController.swift in Sources */,
+				13E4F71E224C3EC9006B959F /* FotoUICollectionViewCell.swift in Sources */,
 				13C11AD022430F5B00C57FC6 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
