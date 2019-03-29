@@ -10,6 +10,7 @@ import UIKit
 
 class FotoUICollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var vTexto: UILabel!
+    @IBOutlet weak var vFoto: UIImageView!
     
+
 }

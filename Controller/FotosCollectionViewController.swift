@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import Photos
 
 private let reuseIdentifier = "foto"
 
-class FotosCollectionViewController: UICollectionViewController {
+class FotosCollectionViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var nomes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
+    var fotos = [UIImage]()
+    var picker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        picker.delegate = self
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,9 +54,12 @@ class FotosCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FotoUICollectionViewCell
-        cell.vTexto.text = nomes[indexPath.row]
+        //cell.vTexto.text = nomes[indexPath.row]
         // Configure the cell
-    
+        if fotos.count > 0 {
+            cell.vFoto.image = fotos[0]
+        }
+        
         return cell
     }
 
@@ -86,4 +94,20 @@ class FotosCollectionViewController: UICollectionViewController {
     }
     */
 
+    @IBAction func salvarFoto(_ sender: Any) {
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+         dismiss(animated: false, completion: nil)
+        print(fotos.count)
+        
+            let i = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            fotos.append(i)
+        print(i.accessibilityIdentifier)
+         print(fotos.count)
+        collectionView.reloadData()
+        
+    }
 }

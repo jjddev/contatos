@@ -123,6 +123,12 @@ class ContatoTableViewController: UITableViewController, UISearchBarDelegate, UI
             contatoViewModel!.setContato(contato)
             next.contatoViewModel = contatoViewModel
         }
+        
+        if segue.identifier == "fotos" {
+            let next = segue.destination as! FotosCollectionViewController
+            
+        }
+        
     }
     
     /*
