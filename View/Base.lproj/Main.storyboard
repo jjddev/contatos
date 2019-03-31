@@ -44,6 +44,9 @@
                                     <constraint firstAttribute="bottom" secondItem="euP-Ko-Bwx" secondAttribute="bottom" id="jrs-pX-h8W"/>
                                     <constraint firstItem="euP-Ko-Bwx" firstAttribute="top" secondItem="yrG-Ao-ipp" secondAttribute="top" id="rHY-zY-gyc"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="vFoto" destination="euP-Ko-Bwx" id="Nwq-6a-Hci"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

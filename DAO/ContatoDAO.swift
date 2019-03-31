@@ -71,6 +71,5 @@ class ContatoDAO {
         } catch {
             print("Erro: \(error)")
         }
-        
     }
 }

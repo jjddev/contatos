@@ -127,6 +127,13 @@ class ContatoTableViewController: UITableViewController, UISearchBarDelegate, UI
         if segue.identifier == "fotos" {
             let next = segue.destination as! FotosCollectionViewController
             
+            let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
+            let index = self.tableView.indexPathForRow(at:buttonPosition)
+            
+            let contato = contatos[index!.row]
+            contatoViewModel!.setContato(contato)
+            next.contatoViewModel = contatoViewModel
+            next.contato = contato
         }
         
     }

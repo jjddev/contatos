@@ -27,7 +27,6 @@
 		3AA6B9592246B681000696A8 /* TelefoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B9572246B681000696A8 /* TelefoneCell.xib */; };
 		3AA6B95B2246F689000696A8 /* icons8-mais-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B95A2246F689000696A8 /* icons8-mais-48.png */; };
 		3AA6B95D2246F691000696A8 /* icons8-cancelar-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA6B95C2246F691000696A8 /* icons8-cancelar-48.png */; };
-		3AE241ED2247C3DE00F17136 /* xViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE241EC2247C3DE00F17136 /* xViewController.swift */; };
 		3AEE596C22409B950082821E /* GenericDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE596B22409B950082821E /* GenericDAO.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +53,6 @@
 		3AA6B9572246B681000696A8 /* TelefoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelefoneCell.xib; sourceTree = "<group>"; };
 		3AA6B95A2246F689000696A8 /* icons8-mais-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-mais-48.png"; sourceTree = "<group>"; };
 		3AA6B95C2246F691000696A8 /* icons8-cancelar-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancelar-48.png"; sourceTree = "<group>"; };
-		3AE241EC2247C3DE00F17136 /* xViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xViewController.swift; sourceTree = "<group>"; };
 		3AEE596B22409B950082821E /* GenericDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +123,6 @@
 			children = (
 				13E4F71D224C3EC9006B959F /* FotoUICollectionViewCell.swift */,
 				13A37577223C71450079CA7E /* Main.storyboard */,
-				3AE241EC2247C3DE00F17136 /* xViewController.swift */,
 				13A3757F223C71460079CA7E /* LaunchScreen.storyboard */,
 				3AA6B9562246B681000696A8 /* TelefoneCell.swift */,
 				3AA6B9572246B681000696A8 /* TelefoneCell.xib */,
@@ -235,7 +232,6 @@
 				13A3758C223C733D0079CA7E /* ContatoTableViewController.swift in Sources */,
 				13C11C5622405E6E00E1CCA5 /* ContatoViewModel.swift in Sources */,
 				13A37574223C71450079CA7E /* AppDelegate.swift in Sources */,
-				3AE241ED2247C3DE00F17136 /* xViewController.swift in Sources */,
 				13A37594223C7C1E0079CA7E /* Model.xcdatamodeld in Sources */,
 				13C11C3322404B8E00E1CCA5 /* FormViewController.swift in Sources */,
 				3AA6B9582246B681000696A8 /* TelefoneCell.swift in Sources */,

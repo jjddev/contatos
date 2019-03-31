@@ -66,4 +66,10 @@ class ContatoViewModel {
         //dao!.delete(c)
     }
     
+    func novaFoto() -> Galeria{
+        var foto = Galeria(context: (contexto?.viewContext)!)
+        contato!.addToAlbum(foto)
+        return foto
+    }
+    
 }

@@ -3,14 +3,19 @@
     <entity name="Contato" representedClassName="Contato" syncable="YES" codeGenerationType="class">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="site" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="album" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Galeria" syncable="YES"/>
         <relationship name="telefones" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Telefone" syncable="YES"/>
+    </entity>
+    <entity name="Galeria" representedClassName="Galeria" syncable="YES" codeGenerationType="class">
+        <attribute name="foto" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
     </entity>
     <entity name="Telefone" representedClassName="Telefone" syncable="YES" codeGenerationType="class">
         <attribute name="numero" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contatos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contato" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contato" positionX="-432.72265625" positionY="220.0703125" width="128" height="88"/>
+        <element name="Contato" positionX="-432.72265625" positionY="220.0703125" width="128" height="103"/>
+        <element name="Galeria" positionX="-418" positionY="126" width="128" height="60"/>
         <element name="Telefone" positionX="-170" positionY="123.9921875" width="128" height="73"/>
     </elements>
 </model>
